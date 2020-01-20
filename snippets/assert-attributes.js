@@ -4,7 +4,7 @@ var element  = document.querySelector(selector)
 
 // Stop process if it does not exist
 if (!element) {
-  throw new Error('Error: cannot find the element with ' + selector + '.');
+  throw new Error('Error: cannot find the element with selector(' + selector + ').');
 }
 
 // Set attribute name
