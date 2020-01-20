@@ -8,13 +8,13 @@ if (!element) {
 }
 
 // Set attribute name
-const attrName = "<TODO: REPLACE ATTRIBUTE NAME. e.g) id, class, data->"
+var attrName = "<TODO: REPLACE ATTRIBUTE NAME. e.g) id, class, data->"
 
 // Get value from the elment
-const actual   = element.getAttribute(attrName)
+var actual   = element.getAttribute(attrName)
 
 // Set expected value
-const expected = "<TODO: REPLACE EXPECTED VALUE>"
+var expected = "<TODO: REPLACE EXPECTED VALUE>"
 
 // Stop process if actual and expected are different
 if (actual !== expected) {
