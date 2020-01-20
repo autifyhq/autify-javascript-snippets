@@ -1,5 +1,5 @@
 // Locate the element
-// 要素を見つける
+// 要素を探す
 var selector = "<TODO: REPLACE SELECTOR>"
 var element  = document.querySelector(selector)
 
@@ -10,15 +10,15 @@ if (!element) {
 }
 
 // Set attribute name
-// 探したい属性を設定
+// 探したい属性を設定する
 var attrName = "<TODO: REPLACE ATTRIBUTE NAME. e.g) id, class, data->"
 
 // Get value from the elment
-// 属性の値を取得
+// 属性の値を取得する
 var actual   = element.getAttribute(attrName)
 
 // Set expected value
-// 期待する値を設定
+// 期待する値を設定する
 var expected = "<TODO: REPLACE EXPECTED VALUE>"
 
 // Stop process if actual and expected are different
