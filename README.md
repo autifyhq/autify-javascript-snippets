@@ -10,6 +10,7 @@
 | IE11, Legacy Edge, Edge | last version| last version| last version| last version| last version
 
 
+
 ### License 
 
 autify-javascript-snippets © Autify Developers. Released under the [Apache 2.0](LICENSE)<br/>
