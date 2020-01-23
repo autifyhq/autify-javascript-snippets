@@ -16,6 +16,6 @@ if (!iframeDocument) {
   throw new Error('Error: cannot find the document inside of iframe.');
 }
 
-var body = iframeDocument.querySelector('body')
-var div  = document.createElement('div')
-body.appendChild(div)
+var iframeBody = iframeDocument.querySelector('body');
+var divElement = document.createElement('div');
+iframeBody.appendChild(divElement);
