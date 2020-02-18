@@ -12,5 +12,5 @@
 
 ### License 
 
-autify-javascript-snippets © [Autify Developers](https://github.com/autifyhq). Released under the [Apache 2.0](LICENSE)<br/>
-Authored and maintained by [Autify Developers](https://github.com/autifyhq) with help from [contributors](https://github.com/autifyhq/autify-javascript-snippets/graphs/contributors).
+autify-javascript-snippets © [Autify Engineers](https://github.com/autifyhq). Released under the [Apache 2.0](LICENSE)<br/>
+Authored and maintained by [Autify Engineers](https://github.com/autifyhq) with help from [contributors](https://github.com/autifyhq/autify-javascript-snippets/graphs/contributors).
