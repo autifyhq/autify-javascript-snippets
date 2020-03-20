@@ -11,12 +11,16 @@ if (!element) {
 
 var event;
 if (typeof(Event) === 'function') {
-   /* For modern browser
-    * モダンブラウザの場合 */
+   /**
+    * For modern browser
+    * モダンブラウザの場合 
+    */
    event = new Event('mouseover');
 } else {
-   /* For IE 11
-    * IE 11 の場合は */
+   /** 
+    * For IE 11
+    * IE 11 の場合は 
+    */
    event = document.createEvent('Event');
    event.initEvent('mouseover', true, true);
 }
