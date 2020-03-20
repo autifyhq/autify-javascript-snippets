@@ -19,7 +19,7 @@ if (typeof(Event) === 'function') {
 } else {
    /** 
     * For IE 11
-    * IE 11 の場合は 
+    * IE 11 の場合
     */
    event = document.createEvent('Event');
    event.initEvent('mouseover', true, true);
