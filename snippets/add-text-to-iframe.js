@@ -16,4 +16,23 @@ if (!iframeDocument) {
   throw new Error('Error: cannot find the document inside of iframe.');
 }
 
-iframeDocument.querySelector('body').textContent = "<TODO: Text>"
+var iframeElementSelector = "<TODO: REPLACE SELECTOR>";
+var iframeElement = iframeDocument.querySelector(iframeElementSelector);
+if (!iframeElement) {
+  throw new Error('Error: cannot find the element with selector (' + iframeElementSelector + ').');
+}
+
+
+
+/** 
+ * Pattern A
+ * When the HTML tag is one of the <button>, <data>, <input>, <li>, <meter>, <option>, <progress>, <param>
+ */
+iframeElement.value = "<TODO: REPLACE TEXT>";
+
+/**
+ * Pattern B
+ * When the HTML tag is except Pattern A
+ */
+iframeElement.textContent = "<TODO: REPLACE TEXT>";
+
