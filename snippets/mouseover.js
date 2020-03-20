@@ -1,10 +1,22 @@
-/* Locate the element
- * 要素を探す */
+/**
+ * Note: A element does not listen to mouseover event. Please make sure the what event listen to with Developer Tools.
+ * https://developers.google.com/web/updates/2015/05/easily-jump-to-event-listeners
+ *
+ * 注意：要素によってはmouseoverイベントが登録されていないものがあります。どのイベントが登録されているかDeveloper Toolsでの確認をしてください。
+ * https://developers.google.com/web/updates/2015/05/easily-jump-to-event-listeners
+ */
+
+/**
+ * Locate the element
+ * 要素を探す
+ */
 var selector = "<TODO: REPLACE SELECTOR>";
 var element  = document.querySelector(selector);
 
-/* Stop process if it does not exist
- * 要素がなければ処理を中断する */
+/**
+ * Stop process if it does not exist
+ * 要素がなければ処理を中断する 
+ */
 if (!element) {
   throw new Error('Error: cannot find the element with selector(' + selector + ').');
 }
