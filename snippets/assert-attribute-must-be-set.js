@@ -5,7 +5,7 @@
  *   Change the values written below.
  *    selector: A string containing one or more selectors to find an element. 
  *    attrName: A string representing the name of the attribute.
- *    errMessage:
+ *   errorMessage:
  *      A string of the error message which you want to show when it fails.
  *      It will be a default string if you don't change from <TODO: REPLACE>.
  *
