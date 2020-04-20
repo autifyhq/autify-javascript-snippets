@@ -1,4 +1,5 @@
-/* Usage of this snippet:
+/**
+ *  Usage:
  *   In the case when you want to confirm an element having a specified attribute.
  *
  *   Change the values written below.
