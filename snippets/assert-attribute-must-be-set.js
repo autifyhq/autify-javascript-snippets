@@ -9,7 +9,7 @@
  *      A string of the error message which you want to show when it fails.
  *      It will be a default string if you don't change from <TODO: REPLACE>.
  *
- * このスニペットの使い方:
+ * 使い方:
  *   要素が特定の属性を持っていることを確認をしたいときにご利用ください。
  *
  *   以下の値を変更してください
