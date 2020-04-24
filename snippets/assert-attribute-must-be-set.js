@@ -41,7 +41,7 @@ if (!element) {
 /* check the if the element has the specified attribute
  * 対象の要素に指定された属性があるか確認 */
 if (!element.hasAttribute(attrName)) {
-  if (errMessage == "<TODO: REPLACE>") {
+  if (errMessage === "<TODO: REPLACE>") {
     errMessage = 'Error: This element is expected to have "' + attrName + '", but it doen't.';
   }
 
