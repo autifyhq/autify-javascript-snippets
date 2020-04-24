@@ -25,7 +25,7 @@ var attrName = "<TODO: REPLACE>";
 var errMessage = "<TODO: REPLACE>";
 
 
-/* --------- You don't need to touch below ---------------
+/* --------- Anything below this does not need to be changed. ---------------
  * --------- ここから下は変える必要はありません ---------- */
 
 /* Locate the element
