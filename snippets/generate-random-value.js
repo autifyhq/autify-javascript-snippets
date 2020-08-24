@@ -1,7 +1,7 @@
 /* Date
- * 日付 */
-/* change the timezone if you need
- * 日本時間(JST)の場合 9 */
+ * 日付
+ *   change the timezone if you need, in the case of JST, set 9
+ *   日本時間(JST)の場合 9 */
 var to_timezone = 9;
 
 var from_timezone_offset = new Date().getTimezoneOffset() * 60 * 1000;
