@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "find snippets -name \\*.js -exec acorn --silent --ecma9 2> err {} \\; && if [ -e err ] && grep \"Unexpected token\" err; then exit 1 ; else echo \"All good\"; fi"
+  },
+  "devDependencies": {
+    "acorn": "^8.0.1"
+  }
+}
