@@ -11,9 +11,21 @@ if (!element) {
 
 /* Create and init a double-click event
  * ダブルクリックのイベントを生成し初期化する */
-var doubleClickEvent = document.createEvent('MouseEvents');
-doubleClickEvent.initEvent('dblclick', true, true);
-
+var event;
+if (typeof(Event) === 'function') {
+   /**
+    * For modern browser
+    * モダンブラウザの場合 
+    */
+   event = new MouseEvent("dblclick", {"bubbles":true, "cancelable":true})
+} else {
+   /** 
+    * For IE 11
+    * IE 11 の場合
+    */
+   event = document.createEvent('MouseEvents');
+   event.initEvent('dblclick', true, true);
+}
 /* Fire a double-click event
  * ダブルクリックのイベントを発火させる */
-element.dispatchEvent(doubleClickEvent);  
+element.dispatchEvent(event);  
