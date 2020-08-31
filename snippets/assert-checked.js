@@ -22,3 +22,4 @@ var actual = element.checked;
 if (actual !== expected) {
    throw new Error('Error: the actual(' + actual + ') does not match the expected(' + expected + ').');
 }
+
