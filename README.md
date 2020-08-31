@@ -1,6 +1,7 @@
 [welcome badge]:   https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [welcome url]:     https://github.com/autifyhq/autify-javascript-snippets
 
+
 # autify-javascript-snippets &middot; [![PRs Welcome][welcome badge]][welcome url]
 
 ### Support browsers
