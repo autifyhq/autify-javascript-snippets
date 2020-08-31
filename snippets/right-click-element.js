@@ -11,9 +11,21 @@ if (!element) {
 
 /* Create and init a right-click (to be exact, contextmenu) event
  * 右クリック (厳密にはcontextmenu) のイベントを生成して初期化する */
-var rightClickEvent = document.createEvent('MouseEvents');
-rightClickEvent.initEvent('contextmenu', true, true);
-
+var event;
+if (typeof(Event) === 'function') {
+   /**
+    * For modern browser
+    * モダンブラウザの場合 
+    */
+   event = new MouseEvent("contextmenu", {"bubbles":true, "cancelable":true})
+} else {
+   /** 
+    * For IE 11
+    * IE 11 の場合
+    */
+   event = document.createEvent('MouseEvents');
+   event.initEvent('contextmenu', true, true);
+}
 /* Fire a right-click event
  * 右クリックのイベントを発火させる */
-element.dispatchEvent(rightClickEvent);  
+element.dispatchEvent(event);  
