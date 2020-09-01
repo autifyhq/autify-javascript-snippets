@@ -1,6 +1,25 @@
+/* Usage of this snippet:
+ *   Use this snippet to fire a right-click event on an element.
+ *
+ *   Change the following value to specify the element:
+ *     selector: A string of the element selector
+ *
+ * このスニペットの用途:
+ *   要素に対して右クリックを発生させるのに使用します。
+ *
+ *   以下の値を対象要素に合わせて変更してください。
+ *     selector: 要素を特定するセレクタの文字列
+ */
+
+/* Specify the element selector
+ * 要素のセレクタを指定する */
+var selector = "<TODO: REPLACE SELECTOR>";
+
+/* --------- You don't need to touch below ---------------
+ * --------- ここから下は変える必要はありません ---------- */
+
 /* Locate the element
  * 要素を探す */
-var selector = "<TODO: REPLACE SELECTOR>";
 var element  = document.querySelector(selector);
 
 /* Exit if it does not exist

@@ -1,11 +1,35 @@
+/* Usage of this snippet:
+ *   Use this snippet to assert that a checkable element
+ *   (such as a radio button implemented as <input type="radio">)
+ *   is checked or not, in case it is not possible with Recorder.
+ * 
+ *   Refer to the following document for currently supported assertions by Recorder.
+ *   https://docs.autify.com/assertions
+ *
+ *   Change the following values to fit your test case:
+ *     selector: A string of a selector to specify the element
+ *     expected: Set true if you expect the element to be checked, otherwise set false
+ *
+ * このスニペットの用途:
+ *   レコーダーで検証できないチェック可能要素 (<input type="radio"> で実装されたラジオボタンなど) が
+ *   チェックされているかどうかのアサーションを行いたい場合にご利用ください。 
+ * 
+ *   現在レコーダーでサポートされているアサーションについては、以下をご確認ください。
+ *   https://docs.autify.com/ja/assertions
+ * 
+ *   以下の値をテストケースに合うように変更してください:
+ *     selector: 対象要素を特定するセレクタの文字列
+ *     expected: チェックされていることを期待する場合は true, されていないことを期待する場合は false
+ */
+var selector = "<TODO: REPLACE SELECTOR>";
+var expected = true;
+
+/* --------- You don't need to touch below ---------------
+ * --------- ここから下は変える必要はありません ---------- */
+
 /* Locate the element
  * 要素を探す */
-var selector = "<TODO: REPLACE SELECTOR>";
 var element  = document.querySelector(selector);
-
-/* Set expected value (Set true if you expect the element to be checked, otherwise set false)
- * 期待する値を設定する (チェックされていることを期待する場合は true, されていないことを期待する場合は false を設定する)　*/
-var expected = true;
 
 /* Exit if it does not exist
  * 要素がなければ処理を中断する */
@@ -20,6 +44,6 @@ var actual = element.checked;
 /* Exit if the actual value does not match the expected value
  * 実際の値と期待する値が違う場合、処理を中断する */
 if (actual !== expected) {
-   throw new Error('Error: the actual(' + actual + ') does not match the expected(' + expected + ').');
+   throw new Error('Error: [assert checked] the actual(' + actual + ') does not match the expected(' + expected + ').');
 }
 
