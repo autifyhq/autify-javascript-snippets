@@ -51,7 +51,7 @@ if (!element) {
  */
 if (!element.hasAttribute(attrName)) {
   if (errMessage == "<TODO: REPLACE>") {
-    errMessage = 'Error: This element is expected to have "' + attrName + '", but it doesn't.';
+    errMessage = 'Error: This element is expected to have "' + attrName + '", but it does not.';
   }
 
   throw new Error(errMessage);
