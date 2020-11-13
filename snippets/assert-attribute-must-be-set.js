@@ -30,7 +30,7 @@ var errMessage = "<TODO: REPLACE>";
 
 /* Locate the element
  * 要素を探す */
-var element  = document.querySelector(selector);
+var element = document.querySelector(selector);
 
 /* Stop process if it does not exist
  * 要素がなければ処理を中断する */
