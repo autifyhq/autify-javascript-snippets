@@ -3,7 +3,7 @@
  *   In the case when you want to confirm an element having a specified attribute.
  *
  *   Change the values written below.
- *    selector: A string containing one or more selectors to find an element. 
+ *    selector: A string containing one or more selectors to find an element.
  *    attrName: A string representing the name of the attribute.
  *   errorMessage:
  *      A string of the error message which you want to show when it fails.
@@ -50,7 +50,7 @@ if (!element) {
  */
 if (!element.hasAttribute(attrName)) {
   if (errMessage === "<TODO: REPLACE>") {
-    errMessage = 'Error: This element is expected to have "' + attrName + '", but it doen't.';
+    errMessage = 'Error: This element is expected to have "' + attrName + '", but it does not.';
   }
 
   throw new Error(errMessage);
