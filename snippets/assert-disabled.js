@@ -24,7 +24,6 @@
  */
 
 var selector = "<TODO: REPLACE>";
-var attrName = "disabled";
 var errMessage = "<TODO: REPLACE>";
 
 
@@ -33,10 +32,12 @@ var errMessage = "<TODO: REPLACE>";
  * --------- ここから下は変える必要はありません ----------
  */
 
+ var attrName = "disabled";
+
 /**
  * Locate the element
  * 要素を探す
- * */
+ */
 var element  = document.querySelector(selector);
 
 /**
