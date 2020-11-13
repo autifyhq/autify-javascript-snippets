@@ -58,7 +58,7 @@ var actual   = element.getAttribute(attrName);
  */
 if (actual !== expected) {
   if (errMessage == "<TODO: REPLACE>") {
-    errMessage = 'Error: expected(' + expected + ') and actual(' + actual + ') are not same.');
+    errMessage = 'Error: expected(' + expected + ') and actual(' + actual + ') are not same.';
   }
 
   throw new Error(errMessage);
