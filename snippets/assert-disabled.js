@@ -1,6 +1,7 @@
 /**
  * Usage of this snippet:
  *   In the case when you want to confirm a element with the attribute `disabled`.
+ *   (Basically we support assertions for disabled element. You need to use this snippet when your app uses `disabled` to the element that doesn't support the attribute, like `<a>` tag.)
  *
  *   Change the values written below.
  *    selector: A string of a selector to pinpoint the element.
@@ -10,8 +11,9 @@
  *      It will be a default string if you don't change from <TODO: REPLACE>.
  *
  * このスニペットの使い方:
+ *   `disabled` 属性の存在を確認したい（ボタンなどが非活性になっていることを確認したい）ときに使用します。
+ *   なお、Autifyでは `<button>` タグなど `disabled` 属性をサポートしている要素に対しては有効/無効のアサーションを用意しています。
  *   <a> タグなど、 disabled 属性をサポートしないタグの要素が無効かどうかの確認をしたいときにご利用ください。
- *   <button> タグなど、 disabled 属性をサポートしているタグはレコーダ上で有効無効を確認するコマンドを選択可能ですのでそちらをご利用ください。
  *
  *   以下の値を変更してください
  *    selector: 対象要素を特定するセレクタの文字列
