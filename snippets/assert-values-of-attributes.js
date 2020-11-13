@@ -1,4 +1,5 @@
-/* Usage of this snippet:
+/**
+ * Usage of this snippet:
  *   In the case when you want to assert a value of a specified attribute.
  *
  *   Change the values written below.
@@ -27,25 +28,34 @@ var expected = "<TODO: REPLACE>";
 var errMessage = "<TODO: REPLACE>";
 
 
-/* --------- You don't need to touch below ---------------
- * --------- ここから下は変える必要はありません ---------- */
+/**
+ *  --------- You don't need to touch below ---------------
+ * --------- ここから下は変える必要はありません ----------
+ */
 
-/* Locate the element
- * 要素を探す */
+/** Locate the element
+ * 要素を探す
+ * */
 var element  = document.querySelector(selector);
 
-/* Stop process if it does not exist
- * 要素がなければ処理を中断する */
+/**
+ *  Stop process if it does not exist
+ * 要素がなければ処理を中断する
+ */
 if (!element) {
   throw new Error('Error: cannot find the element with selector(' + selector + ').');
 }
 
-/* Get value from the elment
- * 属性の値を取得する */
+/**
+ *  Get value from the elment
+ * 属性の値を取得する
+ */
 var actual   = element.getAttribute(attrName);
 
-/* Stop process if actual and expected are different
- * 実際のものと期待するものが違う場合処理を中断する */
+/**
+ * Stop process if actual and expected are different
+ * 実際のものと期待するものが違う場合処理を中断する
+ */
 if (actual !== expected) {
   if (errMessage == "<TODO: REPLACE>") {
     errMessage = 'Error: expected(' + expected + ') and actual(' + actual + ') are not same.');

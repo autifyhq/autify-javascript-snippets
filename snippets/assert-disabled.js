@@ -1,4 +1,5 @@
-/* Usage of this snippet:
+/**
+ * Usage of this snippet:
  *   In the case when you want to confirm a element with the attribute `disabled`.
  *
  *   Change the values written below.
@@ -25,21 +26,29 @@ var attrName = "disabled";
 var errMessage = "<TODO: REPLACE>";
 
 
-/* --------- You don't need to touch below ---------------
- * --------- ここから下は変える必要はありません ---------- */
+/**
+ * --------- You don't need to touch below ---------------
+ * --------- ここから下は変える必要はありません ----------
+ */
 
-/* Locate the element
- * 要素を探す */
+/**
+ * Locate the element
+ * 要素を探す
+ * */
 var element  = document.querySelector(selector);
 
-/* Stop process if it does not exist
- * 要素がなければ処理を中断する */
+/**
+ * Stop process if it does not exist
+ * 要素がなければ処理を中断する
+ */
 if (!element) {
   throw new Error('Error: cannot find the element with selector(' + selector + ').');
 }
 
-/* check if the element has the specified attribute
- * 対象の要素に指定された属性があるか確認 */
+/**
+ * check if the element has the specified attribute
+ * 対象の要素に指定された属性があるか確認
+ */
 if (!element.hasAttribute(attrName)) {
   if (errMessage == "<TODO: REPLACE>") {
     errMessage = 'Error: This element is expected to have "' + attrName + '", but it doesn't.';
