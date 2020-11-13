@@ -1,5 +1,5 @@
 /**
- * Usage of this snippet:
+ * Usage:
  *   In the case when you want to confirm a element with the attribute `disabled`.
  *   (Basically we support assertions for disabled element. You need to use this snippet when your app uses `disabled` to the element that doesn't support the attribute, like `<a>` tag.)
  *
@@ -10,7 +10,7 @@
  *      A string of the error message which you want to show when it fails.
  *      It will be a default string if you don't change from <TODO: REPLACE>.
  *
- * このスニペットの使い方:
+ * 使い方:
  *   `disabled` 属性の存在を確認したい（ボタンなどが非活性になっていることを確認したい）ときに使用します。
  *   なお、Autifyでは `<button>` タグなど `disabled` 属性をサポートしている要素に対しては有効/無効のアサーションを用意しています。
  *   <a> タグなど、 disabled 属性をサポートしないタグの要素が無効かどうかの確認をしたいときにご利用ください。

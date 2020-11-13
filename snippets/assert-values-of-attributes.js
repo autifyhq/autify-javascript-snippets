@@ -1,5 +1,5 @@
 /**
- * Usage of this snippet:
+ * Usage:
  *   In the case when you want to assert a value of a specified attribute.
  *
  *   Change the values written below.
@@ -10,7 +10,7 @@
  *      A string of the error message which you want to show when it fails.
  *      It will be a default string if you don't change from `<TODO: REPLACE>`.
  *
- * このスニペットの使い方:
+ * 使い方:
  *   特定の属性の値を検証したいときにご利用ください。
  *
  *   以下の値を変更してください
@@ -33,13 +33,14 @@ var errMessage = "<TODO: REPLACE>";
  * --------- ここから下は変える必要はありません ----------
  */
 
-/** Locate the element
+/**
+ * Locate the element
  * 要素を探す
- * */
+ */
 var element  = document.querySelector(selector);
 
 /**
- *  Stop process if it does not exist
+ * Stop process if it does not exist
  * 要素がなければ処理を中断する
  */
 if (!element) {
@@ -47,7 +48,7 @@ if (!element) {
 }
 
 /**
- *  Get value from the elment
+ * Get value from the elment
  * 属性の値を取得する
  */
 var actual   = element.getAttribute(attrName);

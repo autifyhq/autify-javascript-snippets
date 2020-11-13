@@ -1,4 +1,5 @@
-/* Usage of this snippet:
+/**
+ *  Usage:
  *   In the case when you want to confirm an element must not to have a specified attribute.
  *
  *   Change the values written below.
@@ -8,7 +9,7 @@
  *      A string of the error message which you want to show when it fails.
  *      It will be a default string if you don't change from <TODO: REPLACE>.
  *
- * このスニペットの使い方:
+ * 使い方:
  *   要素が特定の属性を持っていないことを確認をしたいときにご利用ください。
  *
  *   以下の値を変更してください
