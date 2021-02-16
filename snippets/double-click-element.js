@@ -36,7 +36,7 @@ if (typeof(Event) === 'function') {
     * For modern browser
     * モダンブラウザの場合 
     */
-   event = new MouseEvent("dblclick", {"bubbles":true, "cancelable":true})
+   event = new MouseEvent("dblclick", {"bubbles":true, "cancelable":true});
 } else {
    /** 
     * For IE 11

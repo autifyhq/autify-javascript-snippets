@@ -36,7 +36,7 @@ if (typeof(Event) === 'function') {
     * For modern browser
     * モダンブラウザの場合 
     */
-   event = new MouseEvent("contextmenu", {"bubbles":true, "cancelable":true})
+   event = new MouseEvent("contextmenu", {"bubbles":true, "cancelable":true});
 } else {
    /** 
     * For IE 11
