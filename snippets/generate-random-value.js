@@ -1,10 +1,15 @@
 /**
  * Date
  * 日付
- * change the timezone if you need
- * 日本時間(JST)の場合 9
+ * 
+ * Since the Autify test run cannot be certain of which time zone the server is in, you need to calculate the offset.
+ * Autifyのテスト実行ではどのタイムゾーンのサーバーか確約ができないため、オフセットを計算する必要があります。
+ * 
+ * If you want to get Japan time.
+ * 日本時間(JST)を取得したい場合
+ * var to_timezone = 9;
  */
-var to_timezone = 9;
+var to_timezone = <TODO: REPLACE SIZE>;
 
 var from_timezone_offset = new Date().getTimezoneOffset() * 60 * 1000;
 var to_timezone_offset = to_timezone * 60 * 60 * 1000;
