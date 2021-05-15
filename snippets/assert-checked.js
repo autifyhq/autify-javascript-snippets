@@ -4,7 +4,7 @@
  *   is checked or not, in case it is not possible with Recorder.
  * 
  *   Refer to the following document for currently supported assertions by Recorder.
- *   https://docs.autify.com/assertions
+ *   https://autify.zendesk.com/hc/en-us/articles/900001652023
  *
  *   Change the following values to fit your test case:
  *     selector: A string of a selector to specify the element
@@ -15,7 +15,7 @@
  *   チェックされているかどうかのアサーションを行いたい場合にご利用ください。 
  * 
  *   現在レコーダーでサポートされているアサーションについては、以下をご確認ください。
- *   https://docs.autify.com/ja/assertions
+ *   https://autify.zendesk.com/hc/ja/articles/900001652023
  * 
  *   以下の値をテストケースに合うように変更してください:
  *     selector: 対象要素を特定するセレクタの文字列
