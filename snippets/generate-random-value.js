@@ -15,5 +15,5 @@ return date;
  * Random number
  * 乱数
  */
-var size = "<TODO: REPLACE SIZE>";
-return Math.floor(Math.random() * (9 * Math.pow(10, n - 1))) + Math.pow(10, n - 1);
+var digit = "<TODO: REPLACE DIGIT>";
+return Math.floor(Math.random() * (9 * Math.pow(10, digit - 1))) + Math.pow(10, digit - 1);
