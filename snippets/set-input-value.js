@@ -1,21 +1,25 @@
 /**
  * Usage:
- *   In the case when you want to set date to <input type="date"> element.
+ *   In the case when you want to set value to <input> element.
+ *   Use this if Autify is unable to enter values in a test run for some reason.
+ *   <input type="date"> is a typical element that is not supported by Autify.
  *
  *   Change the values written below.
  *    selector: A string of a selector to pinpoint the element.
- *    dateValue: A string of the date to be set.
+ *    setValue: A value to be set.
  *
  * 使い方:
- *   <input type="date"> の要素に日付を設定したいときにご利用ください。
+ *   <input> 要素に対して値を設定します。
+ *   何らかの理由により、Autify のテスト実行で値の入力ができないときにご利用ください。
+ *   <input type="date"> は、Autify が対応していない代表的な要素です。
  *
  *   以下の値を変更してください
  *    selector: 対象要素を特定するセレクタの文字列
- *    dateValue: 設定したい日付文字列
+ *    setValue: 設定したい値
  */
 
 var selector = "<TODO: REPLACE>";
-var dateValue = "<TODO: REPLACE>"; /* e.g) var dateValue = "2006-01-02" */
+var setValue = "<TODO: REPLACE>"; /* e.g) var setValue = "2006-01-02" */
 
 /**
  *  --------- You don't need to touch below ---------------
@@ -43,4 +47,4 @@ if (!element) {
  * 値を入力する
  */
 
-element.value = dateValue;
+element.value = setValue;
