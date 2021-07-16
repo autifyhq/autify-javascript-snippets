@@ -9,13 +9,8 @@ xhr.open("POST", url, false);
 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 xhr.send("key=value");
 
-xhr.onload = function() {
-  if (xhr.status !== 200) {
-    throw new Error("Error " + xhr.status)
-  }
-  console.log(JSON.parse(xhr.response))
-};
+if (xhr.status !== 200) {
+  throw new Error("Error " + xhr.status)
+}
 
-xhr.onerror = function() {
-  throw new Error("Error: Network Error")
-};
+console.log(JSON.parse(xhr.response))
