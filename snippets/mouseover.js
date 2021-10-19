@@ -7,6 +7,12 @@
  */
 
 /**
+ * Event name you would like to dispatch
+ * 発火させたいイベント名
+ */
+var eventName = "mouseover";
+
+/**
  * CSS selector to locate the element of the mouseover target
  * マウスオーバー対象の要素を特定するための CSS セレクタ
  */
@@ -41,14 +47,14 @@ if (typeof Event === "function") {
    * For modern browser
    * モダンブラウザの場合
    */
-  event = new Event("mouseover");
+  event = new Event(eventName);
 } else {
   /**
    * For IE 11
    * IE 11 の場合
    */
   event = document.createEvent("Event");
-  event.initEvent("mouseover", true, true);
+  event.initEvent(eventName, true, true);
 }
 
 /**
@@ -69,5 +75,5 @@ if (tooltipSelector) {
     );
   }
 
-  tooltip.scrollIntoView();
+  tooltip.scrollIntoView({ block: "center" });
 }
