@@ -35,7 +35,13 @@ dragTarget.dispatchEvent(
     clientY: coords.y,
   })
 );
-dragTarget.dispatchEvent(new MouseEvent("mouseup", { bubbles: true }));
+dragTarget.dispatchEvent(
+  new MouseEvent("mouseup", {
+    bubbles: true,
+    clientX: coords.x,
+    clientY: coords.y,
+  })
+);
 
 function getCoordinates(element) {
   var rect = element.getBoundingClientRect();

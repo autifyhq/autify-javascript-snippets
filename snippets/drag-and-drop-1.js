@@ -31,6 +31,7 @@ if (!dropArea) {
 
 dragTarget.dispatchEvent(dragEvent("dragstart"));
 dropArea.dispatchEvent(dragEvent("drop"));
+dragTarget.dispatchEvent(dragEvent("dragend"));
 
 /**
  * Create DragEvent
