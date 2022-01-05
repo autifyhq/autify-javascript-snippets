@@ -3,7 +3,7 @@
  *   This snippet can be used to click an element found by XPath.
  *   Typically, this will be used in the following cases:
  *   - When you want to find an element by specifying its internal text
- *   - When you want to specify an element based on its relationship with surrounding elements
+ *   - When you want to specify an element based on its complex relationship with surrounding elements which is hard to describe by a CSS selector
  *
  *   Change the following value to specify the element:
  *     xpath: An XPath string (e.g. //*[normalize-space() = 'text inside the element'])
@@ -13,7 +13,7 @@
  *   XPathを指定して見つかった要素をクリックします。
  *   以下のようなケースでよく用いられます。
  *   - 内部のテキストを指定して要素を見つけたい場合
- *   - 周囲の要素との関係から要素を指定したい場合
+ *   - CSSセレクターでの表現が難しい、周囲の要素との複雑な関係から要素を指定したい場合
  *
  *   以下の値を対象要素に合わせて変更してください。
  *     xpath: 要素を指定するXPathの文字列 (例: //*[normalize-space() = '要素内のテキスト'])
