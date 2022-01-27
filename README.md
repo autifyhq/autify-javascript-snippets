@@ -2,8 +2,8 @@
 
 ### Table of Contents
 
-[English](toc-en.md)
-[Japanese](toc-ja.md)
+* [English](toc-en.md)
+* [Japanese](toc-ja.md)
 
 ### License
 
