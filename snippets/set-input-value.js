@@ -47,15 +47,4 @@ if (!element) {
  * 値を入力する
  */
 
-changeValue(element, setValue);
-
-function changeValue(input, value) {
-  var nativeInputValueSetter = Object.getOwnPropertyDescriptor(
-    window.HTMLInputElement.prototype,
-    "value"
-  ).set;
-  nativeInputValueSetter.call(input, value);
-
-  var inputEvent = new Event("input", { bubbles: true });
-  input.dispatchEvent(inputEvent);
-}
+element.value = setValue;
