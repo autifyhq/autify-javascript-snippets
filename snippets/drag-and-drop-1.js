@@ -1,9 +1,11 @@
 /*
  * Use this snippet to drag and drop an element using drag events.
  * Whether it will work or not depends on how the dran-and-drop is implemented in the web site.
+ * This snippet does not support IE.
  *
  * ドラッグイベントを利用して要素をドラッグ&ドロップするためにこのスニペットを使用します。
  * このスニペットが機能するかどうかはサイト内で実装されているドラッグ&ドロップの実装によります。
+ * このスニペットはIEをサポートしていません。
  *
  */
 
