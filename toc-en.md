@@ -2,8 +2,6 @@
 
 File | Description
 ---|---
-[./snippets/add-element-to-iframe.js](./snippets/add-element-to-iframe.js) | Add an element inside iframe
-[./snippets/add-text-to-iframe.js](./snippets/add-text-to-iframe.js) | Add text inside iframe
 [./snippets/assert-attribute-must-be-set.js](./snippets/assert-attribute-must-be-set.js) | Assert that an element has a specified attribute
 [./snippets/assert-attribute-must-not-be-set.js](./snippets/assert-attribute-must-not-be-set.js) | Assert that an element does not have a specified attribute
 [./snippets/assert-checked.js](./snippets/assert-checked.js) | Assert that a checkable element (such as a radio button implemented as `<input type="radio">`) is checked or not, in case it is not possible with Recorder
