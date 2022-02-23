@@ -1,0 +1,42 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Autify JavaScript Snippets'
+
+theme = "hugo-geekdoc"
+
+defaultContentLanguage = "en"
+
+[languages.en]
+languageName = "English"
+contentDir = "content/en"
+weight = 10
+
+[languages.ja]
+languageName = "日本語"
+contentDir = "content/ja"
+weight = 20
+
+pluralizeListTitles = false
+
+# Geekdoc required configuration
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+disablePathToLower = true
+
+# Required if you want to render robots.txt template
+enableRobotsTXT = true
+
+# Needed for mermaid shortcodes
+[markup]
+  [markup.goldmark.renderer]
+    # Needed for mermaid shortcode
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 9
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+geekdocBreadcrumb = false
