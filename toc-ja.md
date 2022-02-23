@@ -2,8 +2,6 @@
 
 File | Description
 ---|---
-[./snippets/add-element-to-iframe.js](./snippets/add-element-to-iframe.js) | iframeに要素を追加したいときにご利用ください。
-[./snippets/add-text-to-iframe.js](./snippets/add-text-to-iframe.js) | iframeにテキストを追加したいときにご利用ください。
 [./snippets/assert-attribute-must-be-set.js](./snippets/assert-attribute-must-be-set.js) | 要素が特定の属性を持っていることを確認をしたいときにご利用ください。
 [./snippets/assert-attribute-must-not-be-set.js](./snippets/assert-attribute-must-not-be-set.js) | 要素が特定の属性を持っていないことを確認をしたいときにご利用ください。
 [./snippets/assert-checked.js](./snippets/assert-checked.js) | レコーダーで検証できないチェック可能要素 (`<input type="radio">` で実装されたラジオボタンなど) がチェックされているかどうかのアサーションを行いたい場合にご利用ください。
