@@ -1,10 +1,22 @@
 /*
- * Use this snippet to drag and drop an element using mouse events.
+ * Use this snippet to drag and drop an element.
+ * This emulates a drag-and-drop operation using MouseEvent.
  * Whether it will work or not depends on how the dran-and-drop is implemented in the web site.
  *
- * マウスイベントを利用して要素をドラッグ&ドロップするためにこのスニペットを使用します。
- * このスニペットが機能するかどうかはサイト内で実装されているドラッグ&ドロップの実装によります。
+ * Usage:
+ *   Change the variables below.
+ *     dragTargetSelector: CSS selector for the element you want to drag
+ *     dropAreaSelector:   CSS selector for the element where you want to drop
  *
+ * このスニペットは要素をドラッグ&ドロップするのに使用します。
+ * MouseEventを使ってドラッグ&ドロップ操作をエミュレートします。
+ * このスニペットが機能するかどうかはサイト内で実装されているドラッグ&ドロップの実装によります。
+ * このスニペットはIEをサポートしていません。
+ *
+ * 使い方:
+ *   下記の変数を変更してください。
+ *     dragTargetSelector: ドラッグしたい要素のCSSセレクター
+ *     dropAreaSelector:   ドロップしたい場所の要素のCSSセレクター
  */
 
 var dragTargetSelector = "<TODO: REPLACE SELECTOR>";
