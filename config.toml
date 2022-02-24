@@ -35,6 +35,9 @@ enableRobotsTXT = true
     startLevel = 1
     endLevel = 9
 
+[markup.highlight]
+style = "vs"
+
 [taxonomies]
   tag = "tags"
 
