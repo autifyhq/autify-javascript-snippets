@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { ok, strict as assert } from "assert";
+import { strict as assert } from "assert";
 import * as acorn from "acorn";
 import yaml from "js-yaml";
 
@@ -11,7 +11,7 @@ const omit = (obj, key) => ({
 
 const __dirname = new URL(".", import.meta.url).pathname;
 const contentDir = (lang) =>
-  path.resolve(__dirname, "../web/content", lang, "snippets");
+  path.resolve(__dirname, "../content", lang, "snippets");
 
 const jsCodeBlockPattern = /```js(.+)```/s;
 const frontMatterPattern = /---\n(.+)\n---/s;
