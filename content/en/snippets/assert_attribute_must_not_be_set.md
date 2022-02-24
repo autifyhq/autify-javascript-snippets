@@ -17,24 +17,27 @@ var selector = "<TODO: REPLACE>";
 var attrName = "<TODO: REPLACE>";
 var errMessage = "<TODO: REPLACE>";
 
-
 /* --------- You don't need to touch below --------------- */
 
 /* Locate the element */
-var element  = document.querySelector(selector);
+var element = document.querySelector(selector);
 
 /* Stop process if it does not exist */
 if (!element) {
-  throw new Error('Error: cannot find the element with selector(' + selector + ').');
+  throw new Error(
+    "Error: cannot find the element with selector(" + selector + ")."
+  );
 }
 
 /* check the if the element has the specified attribute */
 if (element.hasAttribute(attrName)) {
   if (errMessage == "<TODO: REPLACE>") {
-    errMessage = 'Error: This element is expected not to have "' + attrName + '", but it does.';
+    errMessage =
+      'Error: This element is expected not to have "' +
+      attrName +
+      '", but it does.';
   }
 
   throw new Error(errMessage);
 }
-
 ```

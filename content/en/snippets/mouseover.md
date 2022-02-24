@@ -13,27 +13,29 @@ https://developers.google.com/web/updates/2015/05/easily-jump-to-event-listeners
  * Locate the element
  */
 var selector = "<TODO: REPLACE SELECTOR>";
-var element  = document.querySelector(selector);
+var element = document.querySelector(selector);
 
 /**
  * Stop process if it does not exist
  */
 if (!element) {
-  throw new Error('Error: cannot find the element with selector(' + selector + ').');
+  throw new Error(
+    "Error: cannot find the element with selector(" + selector + ")."
+  );
 }
 
 var event;
-if (typeof(Event) === 'function') {
-   /**
-    * For modern browser
-    */
-   event = new Event('mouseover');
+if (typeof Event === "function") {
+  /**
+   * For modern browser
+   */
+  event = new Event("mouseover");
 } else {
-   /**
-    * For IE 11
-    */
-   event = document.createEvent('Event');
-   event.initEvent('mouseover', true, true);
+  /**
+   * For IE 11
+   */
+  event = document.createEvent("Event");
+  event.initEvent("mouseover", true, true);
 }
 
 /**

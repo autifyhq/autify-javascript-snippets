@@ -4,15 +4,15 @@ weight: 30
 ie_support: false
 ---
 
-XPathを指定して見つかった要素をクリックします。
+XPath を指定して見つかった要素をクリックします。
 以下のようなケースでよく用いられます。
 
 - 内部のテキストを指定して要素を見つけたい場合
-- CSSセレクターでの表現が難しい、周囲の要素との複雑な関係から要素を指定したい場合
+- CSS セレクターでの表現が難しい、周囲の要素との複雑な関係から要素を指定したい場合
 
 以下の値を対象要素に合わせて変更してください。
 
-- `xpath`: 要素を指定するXPathの文字列 (例: `//*[normalize-space() = '要素内のテキスト']`)
+- `xpath`: 要素を指定する XPath の文字列 (例: `//*[normalize-space() = '要素内のテキスト']`)
 
 ```js
 /**
@@ -24,7 +24,13 @@ var xpath = "<TODO: REPLACE>";
  * ここから下は変える必要はありません
  */
 function getElementByXpath(path) {
-  return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+  return document.evaluate(
+    path,
+    document,
+    null,
+    XPathResult.FIRST_ORDERED_NODE_TYPE,
+    null
+  ).singleNodeValue;
 }
 
 /**

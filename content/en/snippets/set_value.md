@@ -24,13 +24,15 @@ var setValue = "<TODO: REPLACE>"; /* e.g) var setValue = "2006-01-02" */
 /**
  * Locate the element
  */
-var element  = document.querySelector(selector);
+var element = document.querySelector(selector);
 
 /**
  * Stop process if it does not exist
  */
 if (!element) {
-  throw new Error('Error: cannot find the element with selector(' + selector + ').');
+  throw new Error(
+    "Error: cannot find the element with selector(" + selector + ")."
+  );
 }
 
 /**

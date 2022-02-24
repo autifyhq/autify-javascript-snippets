@@ -17,7 +17,6 @@ var selector = "<TODO: REPLACE>";
 var attrName = "<TODO: REPLACE>";
 var errMessage = "<TODO: REPLACE>";
 
-
 /**
  * --------- ここから下は変える必要はありません ----------
  */
@@ -31,7 +30,9 @@ var element = document.querySelector(selector);
  * 要素がなければ処理を中断する
  */
 if (!element) {
-  throw new Error('Error: cannot find the element with selector(' + selector + ').');
+  throw new Error(
+    "Error: cannot find the element with selector(" + selector + ")."
+  );
 }
 
 /**
@@ -39,10 +40,12 @@ if (!element) {
  */
 if (!element.hasAttribute(attrName)) {
   if (errMessage === "<TODO: REPLACE>") {
-    errMessage = 'Error: This element is expected to have "' + attrName + '", but it does not.';
+    errMessage =
+      'Error: This element is expected to have "' +
+      attrName +
+      '", but it does not.';
   }
 
   throw new Error(errMessage);
 }
-
 ```

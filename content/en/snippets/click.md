@@ -11,13 +11,15 @@ This snippet finds an element by a CSS selector, and click it.
  * Locate the element
  */
 var selector = "<TODO: REPLACE SELECTOR>";
-var element  = document.querySelector(selector);
+var element = document.querySelector(selector);
 
 /**
  * Stop process if it does not exist
  */
 if (!element) {
-  throw new Error('Error: cannot find the element with selector(' + selector + ').');
+  throw new Error(
+    "Error: cannot find the element with selector(" + selector + ")."
+  );
 }
 
 /**

@@ -17,27 +17,29 @@ var selector = "<TODO: REPLACE SELECTOR>";
 /* --------- ここから下は変える必要はありません ---------- */
 
 /* 要素を探す */
-var element  = document.querySelector(selector);
+var element = document.querySelector(selector);
 
 /* 要素がなければ処理を中断する */
 if (!element) {
-  throw new Error('Error: cannot find the element with selector(' + selector + ').');
+  throw new Error(
+    "Error: cannot find the element with selector(" + selector + ")."
+  );
 }
 
 /* 右クリック (厳密にはcontextmenu) のイベントを生成して初期化する */
 var event;
-if (typeof(Event) === 'function') {
-   /**
-    * モダンブラウザの場合 
-    */
-   event = new MouseEvent("contextmenu", {"bubbles":true, "cancelable":true});
+if (typeof Event === "function") {
+  /**
+   * モダンブラウザの場合
+   */
+  event = new MouseEvent("contextmenu", { bubbles: true, cancelable: true });
 } else {
-   /** 
-    * IE 11 の場合
-    */
-   event = document.createEvent('MouseEvents');
-   event.initEvent('contextmenu', true, true);
+  /**
+   * IE 11 の場合
+   */
+  event = document.createEvent("MouseEvents");
+  event.initEvent("contextmenu", true, true);
 }
 /* 右クリックのイベントを発火させる */
-element.dispatchEvent(event);  
+element.dispatchEvent(event);
 ```

@@ -24,7 +24,13 @@ var xpath = "<TODO: REPLACE>";
  * The following lines do not need to be changed
  */
 function getElementByXpath(path) {
-  return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+  return document.evaluate(
+    path,
+    document,
+    null,
+    XPathResult.FIRST_ORDERED_NODE_TYPE,
+    null
+  ).singleNodeValue;
 }
 
 /**
@@ -43,5 +49,4 @@ if (!element) {
  * Click the element
  */
 element.click();
-
 ```

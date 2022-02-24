@@ -24,13 +24,15 @@ var setValue = "<TODO: REPLACE>"; /* e.g) var setValue = "2006-01-02" */
 /**
  * 要素を探す
  */
-var element  = document.querySelector(selector);
+var element = document.querySelector(selector);
 
 /**
  * 要素がなければ処理を中断する
  */
 if (!element) {
-  throw new Error('Error: cannot find the element with selector(' + selector + ').');
+  throw new Error(
+    "Error: cannot find the element with selector(" + selector + ")."
+  );
 }
 
 /**

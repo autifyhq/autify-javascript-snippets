@@ -4,7 +4,7 @@ weight: 45
 ie_support: true
 ---
 
-注意：要素によってはmouseoverイベントが登録されていないものがあります。どのイベントが登録されているかDeveloper Toolsでの確認をしてください。
+注意：要素によっては mouseover イベントが登録されていないものがあります。どのイベントが登録されているか Developer Tools での確認をしてください。
 
 https://developers.google.com/web/updates/2015/05/easily-jump-to-event-listeners
 
@@ -13,27 +13,29 @@ https://developers.google.com/web/updates/2015/05/easily-jump-to-event-listeners
  * 要素を探す
  */
 var selector = "<TODO: REPLACE SELECTOR>";
-var element  = document.querySelector(selector);
+var element = document.querySelector(selector);
 
 /**
  * 要素がなければ処理を中断する
  */
 if (!element) {
-  throw new Error('Error: cannot find the element with selector(' + selector + ').');
+  throw new Error(
+    "Error: cannot find the element with selector(" + selector + ")."
+  );
 }
 
 var event;
-if (typeof(Event) === 'function') {
-   /**
-    * モダンブラウザの場合
-    */
-   event = new Event('mouseover');
+if (typeof Event === "function") {
+  /**
+   * モダンブラウザの場合
+   */
+  event = new Event("mouseover");
 } else {
-   /**
-    * IE 11 の場合
-    */
-   event = document.createEvent('Event');
-   event.initEvent('mouseover', true, true);
+  /**
+   * IE 11 の場合
+   */
+  event = document.createEvent("Event");
+  event.initEvent("mouseover", true, true);
 }
 
 /**
