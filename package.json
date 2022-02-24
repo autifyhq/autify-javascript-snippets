@@ -3,7 +3,10 @@
   "scripts": {
     "test": "find snippets -name \\*.js -exec acorn --silent --ecma9 2> err {} \\; && if [ -e err ] && grep \"Unexpected token\" err; then exit 1 ; else echo \"All good\"; fi"
   },
+  "type": "module",
   "devDependencies": {
-    "acorn": "^8.0.1"
+    "acorn": "^8.7.0",
+    "js-yaml": "^4.1.0",
+    "mocha": "^9.2.1"
   }
 }
