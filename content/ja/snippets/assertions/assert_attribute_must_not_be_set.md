@@ -1,5 +1,5 @@
 ---
-title: "Confirm an element must not to have attribute"
+title: "要素が特定の属性を持たないことを確認する"
 weight: 110
 ie_support: true
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Mouse over"
-weight: 45
+title: "マウスホバー"
+weight: 50
 ie_support: true
 ---
 

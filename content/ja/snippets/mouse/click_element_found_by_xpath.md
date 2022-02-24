@@ -1,5 +1,5 @@
 ---
-title: "XPathで見つかった要素をクリックする"
+title: "XPathで見つけた要素をクリックする"
 weight: 30
 ie_support: false
 ---

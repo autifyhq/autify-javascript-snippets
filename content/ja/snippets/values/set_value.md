@@ -1,5 +1,5 @@
 ---
-title: "Set input value"
+title: "要素に値を設定する"
 weight: 80
 ie_support: false
 ---
