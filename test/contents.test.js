@@ -82,11 +82,25 @@ describe("content/", () => {
           it("JS code is valid", () => {
             assert.ok(content);
             assert.ok(jsCode);
-            const ecmaVersion = 2020; // TODO: give via front matter
+            const ecmaVersion = frontMatter.ie_support ? 5 : 2020;
             assert.doesNotThrow(
               () => acorn.parse(jsCode, { ecmaVersion }),
               `Failed to parse JavaScript code with ECMA version ${ecmaVersion}`
             );
+          });
+
+          it("JS code is same as the corresponding one except comments", () => {
+            assert.ok(content);
+            assert.ok(jsCode);
+            const otherContent = fs.readFileSync(
+              path.join(contentDir(otherLang), snippetFile),
+              "utf8"
+            );
+            const otherJsCode = jsCodeBlockPattern.exec(otherContent)[1];
+            const removeComments = (jsCode) => {
+              return jsCode.replace(/\/\*[\s\S]*?\*\/|\/\/.*/g, "").trim();
+            };
+            assert.equal(removeComments(jsCode), removeComments(otherJsCode));
           });
         });
       }
