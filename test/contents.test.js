@@ -84,7 +84,17 @@ describe("content/", () => {
             assert.ok(jsCode);
             const ecmaVersion = frontMatter.ie_support ? 5 : 2020;
             assert.doesNotThrow(
-              () => acorn.parse(jsCode, { ecmaVersion }),
+              () => {
+                try {
+                  acorn.parse(jsCode, { ecmaVersion })
+                } catch (e) {
+                  // It's ok because it's inside of a JS step function
+                  if (e.message.startsWith("'return' outside of function")) {
+                    return
+                  }
+                  throw e
+                }
+              },
               `Failed to parse JavaScript code with ECMA version ${ecmaVersion}`
             );
           });
