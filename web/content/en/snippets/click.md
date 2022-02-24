@@ -1,6 +1,7 @@
 ---
 title: "Click an element"
 weight: 10
+ie_support: true
 ---
 
 This snippet finds an element by a CSS selector, and click it.

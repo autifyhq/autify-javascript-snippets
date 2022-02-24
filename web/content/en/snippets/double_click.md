@@ -1,6 +1,7 @@
 ---
 title: "Double click an element"
-weight: 10
+weight: 20
+ie_support: true
 ---
 
 Use this snippet to fire a double-click event on an element.
