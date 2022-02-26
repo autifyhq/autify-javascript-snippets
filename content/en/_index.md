@@ -2,4 +2,6 @@
 title: Autify JavaScript Snippets
 ---
 
-TODO: Give descriptions.
+See [Usage]({{< ref "/getting_started/usage" >}}) first.
+
+{{< toc-tree >}}
