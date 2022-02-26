@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { strict as assert } from "assert";
+import glob from "glob";
 import * as acorn from "acorn";
 import yaml from "js-yaml";
 
@@ -20,9 +21,9 @@ describe("content/", () => {
   const langs = ["en/", "ja/"];
 
   for (const lang of langs) {
-    const snippetFiles = fs
-      .readdirSync(contentDir(lang))
-      .filter((name) => name.endsWith(".md") && !name.startsWith("_"));
+    const snippetFiles = glob.sync("**/!(_)*.md", {
+      cwd: contentDir(lang),
+    });
 
     describe(lang, () => {
       for (const snippetFile of snippetFiles) {
@@ -83,20 +84,17 @@ describe("content/", () => {
             assert.ok(content);
             assert.ok(jsCode);
             const ecmaVersion = frontMatter.ie_support ? 5 : 2020;
-            assert.doesNotThrow(
-              () => {
-                try {
-                  acorn.parse(jsCode, { ecmaVersion })
-                } catch (e) {
-                  // It's ok because it's inside of a JS step function
-                  if (e.message.startsWith("'return' outside of function")) {
-                    return
-                  }
-                  throw e
+            assert.doesNotThrow(() => {
+              try {
+                acorn.parse(jsCode, { ecmaVersion });
+              } catch (e) {
+                // It's ok because it's inside of a JS step function
+                if (e.message.startsWith("'return' outside of function")) {
+                  return;
                 }
-              },
-              `Failed to parse JavaScript code with ECMA version ${ecmaVersion}`
-            );
+                throw e;
+              }
+            }, `Failed to parse JavaScript code with ECMA version ${ecmaVersion}`);
           });
 
           it("JS code is same as the corresponding one except comments", () => {
