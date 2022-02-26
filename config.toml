@@ -41,5 +41,12 @@ style = "vs"
 [taxonomies]
   tag = "tags"
 
+# Configuration for hugo-geekdoc theme
+# https://geekdocs.de/usage/configuration/
 [params]
-geekdocBreadcrumb = false
+geekdocRepo = "https://github.com/autifyhq/autify-javascript-snippets"
+geekdocEditPath = "edit/master"
+geekdocBreadcrumb = true
+[params.geekdocContentLicense]
+  name = "Apache-2.0 License"
+  link = "https://github.com/autifyhq/autify-javascript-snippets/blob/master/LICENSE"
