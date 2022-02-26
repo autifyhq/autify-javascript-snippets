@@ -1,5 +1,5 @@
 ---
-title: "Confirm an element is disabled"
+title: "要素が無効であることを確認する"
 weight: 20
 ie_support: true
 ---
@@ -19,20 +19,17 @@ var selector = "<TODO: REPLACE>";
 var errMessage = "<TODO: REPLACE>";
 
 /**
- * --------- You don't need to touch below ---------------
  * --------- ここから下は変える必要はありません ----------
  */
 
 var attrName = "disabled";
 
 /**
- * Locate the element
  * 要素を探す
  */
 var element = document.querySelector(selector);
 
 /**
- * Stop process if it does not exist
  * 要素がなければ処理を中断する
  */
 if (!element) {
@@ -42,7 +39,6 @@ if (!element) {
 }
 
 /**
- * check if the element has the specified attribute
  * 対象の要素に指定された属性があるか確認
  */
 if (!element.hasAttribute(attrName)) {
