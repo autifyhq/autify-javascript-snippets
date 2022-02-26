@@ -4,6 +4,8 @@ weight: 50
 ie_support: true
 ---
 
+Fire mouseover event on an element. Use this snippet when a hover step cannot be recorded for some reason.
+
 Note: A element does not listen to mouseover event. Please make sure the what event listen to with Developer Tools.
 
 https://developers.google.com/web/updates/2015/05/easily-jump-to-event-listeners

@@ -4,6 +4,8 @@ weight: 10
 ie_support: true
 ---
 
+指定した URL に対して POST リクエストを送ります。
+
 ```js
 var url = "API URL";
 var xhr = new XMLHttpRequest();

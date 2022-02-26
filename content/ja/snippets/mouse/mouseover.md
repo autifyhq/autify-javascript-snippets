@@ -4,6 +4,8 @@ weight: 50
 ie_support: true
 ---
 
+ホバーステップでマウスオーバーをうまく記録できない場合に、マウスオーバーを再現します。
+
 注意：要素によっては mouseover イベントが登録されていないものがあります。どのイベントが登録されているか Developer Tools での確認をしてください。
 
 https://developers.google.com/web/updates/2015/05/easily-jump-to-event-listeners

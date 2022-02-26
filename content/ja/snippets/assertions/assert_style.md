@@ -1,8 +1,10 @@
 ---
-title: "特定のスタイルを持つことを確認する"
+title: "要素のstyleを検証する"
 weight: 30
 ie_support: true
 ---
+
+要素の style を検証したいときにご利用ください。
 
 ```js
 /* 要素を探す */

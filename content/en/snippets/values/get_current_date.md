@@ -4,6 +4,8 @@ weight: 70
 ie_support: true
 ---
 
+Generate a timestamp that depends on the locale on execution environment.
+
 Since the Autify test run cannot be certain of which time zone the server is in, you need to calculate the offset.
 
 - If you want to get Japan Time: `var to_timezone = 9;`

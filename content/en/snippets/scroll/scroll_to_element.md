@@ -4,6 +4,8 @@ weight: 20
 ie_support: false
 ---
 
+Scroll to a specified element in the entire page.
+
 ```js
 /**
  * Locate the element

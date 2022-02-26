@@ -1,8 +1,10 @@
 ---
-title: "Scroll to a specified coordinate"
+title: "Scroll by coordinate"
 weight: 10
 ie_support: true
 ---
+
+Scroll in the entire page by specifying a coordinate.
 
 ```js
 /**

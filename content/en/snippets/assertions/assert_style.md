@@ -4,6 +4,8 @@ weight: 30
 ie_support: true
 ---
 
+Confirm an element has a specified style.
+
 ```js
 /* Locate the element */
 var selector = "<TODO: REPLACE SELECTOR>";

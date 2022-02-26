@@ -4,7 +4,7 @@ weight: 10
 ie_support: true
 ---
 
-This snippet finds an element by a CSS selector, and click it.
+Fire a click event to a specified element. Use this snippet when a click cannot be recorded for some reason.
 
 ```js
 /**

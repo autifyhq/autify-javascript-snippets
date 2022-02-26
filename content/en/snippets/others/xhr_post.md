@@ -4,6 +4,8 @@ weight: 10
 ie_support: true
 ---
 
+Send POST request to a URL. Use this snippet when you want to send a HTTP request to an API endpoint.
+
 ```js
 var url = "API URL";
 var xhr = new XMLHttpRequest();
