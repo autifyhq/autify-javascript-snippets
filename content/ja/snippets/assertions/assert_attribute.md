@@ -8,10 +8,10 @@ ie_support: true
 
 以下の値を変更してください。
 
-- selector: 対象要素を特定するセレクタの文字列
-- attrName: 値を検証したい属性の文字列
-- expected: 検証対象属性に期待する値の文字列
-- errMessage: 検証が失敗したときに表示したいエラーメッセージの文字列。`<TODO: REPLACE>` のまま変更がない場合はデフォルトの文言で表示します。
+- `selector`: 対象要素を特定するセレクタの文字列
+- `attrName`: 値を検証したい属性の文字列
+- `expected`: 検証対象属性に期待する値の文字列
+- `errMessage`: 検証が失敗したときに表示したいエラーメッセージの文字列。`<TODO: REPLACE>` のまま変更がない場合はデフォルトの文言で表示します。
 
 ```js
 var selector = "<TODO: REPLACE>";
