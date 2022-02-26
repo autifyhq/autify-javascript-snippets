@@ -2,9 +2,6 @@
   <nav class="container flex">
     <div>
       <section class="flex flex-wrap align-center">
-        <span class="gdoc-footer__item gdoc-footer__item--row">
-          {{ i18n "footer_build_with" | safeHTML }}
-        </span>
         {{ with .Site.Params.GeekdocLegalNotice }}
           <span class="gdoc-footer__item gdoc-footer__item--row">
             <a href="{{ . | relURL }}" class="gdoc-footer__link">
