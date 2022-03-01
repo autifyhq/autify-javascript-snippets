@@ -1,0 +1,32 @@
+/**
+ *  Usage:
+ *   When you need to scroll not whole page but inside of a specified element.
+ *
+ *   Change the values written below.
+ *    selector    : A string containing one or more selectors to find an element.
+ *    count       : A number how many times you want to scroll.
+ *    scrollRange : A number of pixel how much you want to scroll down.
+ *
+ * 使い方:
+ *   ページ全体ではなく、特定の要素の中でスクロールさせたいときにご利用ください。
+ *
+ *   以下の値を変更してください
+ *    selector    : 対象要素を特定するセレクタの文字列
+ *    count       : スクロールを発生させたい回数
+ *    scrollRange : スクロールさせたいピクセル数
+ */
+
+var selector    = "<TODO: REPLACE>"; /* e.g. var selector = "#sample > div"; */
+var count       = <TODO: REPLACE>;   /* e.g. var count = 3; */
+var scrollRange = <TODO: REPLACE>;   /* e.g. var scrollRange = 1000; */
+
+function scrollLoop(maxCount, i) {
+  if (i <= maxCount) {
+    var element = document.querySelector(selector)
+    element.scrollTop = scrollRange;
+    if (element.scrollTop < scrollRange) {
+      setTimeout(function(){ scrollLoop(maxCount, i + 1); }, 1000);
+    }
+  }
+}
+scrollLoop(count,0);
