@@ -1,4 +1,8 @@
-# autify-javascript-snippets &middot; ![check-contents](https://github.com/autifyhq/autify-javascript-snippets/workflows/check-contents/badge.svg?branch=master)
+# autify-javascript-snippets &middot; ![check-contents](https://github.com/autifyhq/autify-javascript-snippets/workflows/check-contents/badge.svg?branch=master) [![Netlify Status](https://api.netlify.com/api/v1/badges/9645bcb3-2964-440f-9b31-ebd3d9cc908c/deploy-status)](https://app.netlify.com/sites/autify-javascript-snippets/deploys)
+
+JavaScript snippets used commonly in Autify’s JS steps.
+
+https://autify-javascript-snippets.netlify.app/
 
 ### Development
 
