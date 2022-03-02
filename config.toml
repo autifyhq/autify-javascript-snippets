@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://autify-javascript-snippets.netlify.app/'
 languageCode = 'en-us'
 title = 'Autify JavaScript Snippets'
 
