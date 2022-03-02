@@ -1,5 +1,13 @@
 # autify-javascript-snippets &middot; ![check-contents](https://github.com/autifyhq/autify-javascript-snippets/workflows/check-contents/badge.svg?branch=master)
 
+Now we have a website for our JavaScript snippets 🎉
+
+💻 [Autify JavaScript Snippets](https://autify-javascript-snippets.netlify.app/)
+
+You can find detailed information about how to use each snippet on this site!
+
+----
+
 ### Development
 
 Prerequisites:
