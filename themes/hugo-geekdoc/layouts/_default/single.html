@@ -1,0 +1,19 @@
+{{ define "main" }}
+  {{ partial "page-header" . }}
+
+
+  <article
+    class="gdoc-markdown gdoc-markdown__align--{{ default "left" (.Page.Params.GeekdocAlign | lower) }}"
+  >
+    <h1>{{ partial "utils/title" . }}</h1>
+
+    {{ if not .Params.ie_support }}
+      <blockquote class="gdoc-hint warning">
+        <strong>IE11 not supported</strong><br/>
+        This snippet does not support IE11.
+      </blockquote>
+    {{ end }}
+
+    {{ partial "utils/content" . }}
+  </article>
+{{ end }}
