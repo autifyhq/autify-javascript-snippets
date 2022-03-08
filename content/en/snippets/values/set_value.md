@@ -1,6 +1,7 @@
 ---
 title: "Set input value"
 weight: 80
+ie_support: true
 ---
 
 In the case when you want to set value to `<input>` element.

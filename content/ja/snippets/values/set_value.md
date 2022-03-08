@@ -1,6 +1,7 @@
 ---
 title: "要素に値を設定する"
 weight: 80
+ie_support: true
 ---
 
 `<input>` 要素に対して値を設定します。
