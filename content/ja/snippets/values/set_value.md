@@ -47,7 +47,19 @@ function changeValue(input, value) {
   ).set;
   nativeInputValueSetter.call(input, value);
 
-  var inputEvent = new Event("input", { bubbles: true });
-  input.dispatchEvent(inputEvent);
+  var inputEvent;
+  if (typeof Event === "function") {
+    /**
+    * モダンブラウザ用の処理
+    */
+    inputEvent = new Event("input", { bubbles: true });
+  } else {
+    /**
+     * IE 11 対応
+     */
+    inputEvent = document.createEvent("Event");
+    inputEvent.initEvent("input", true, true);
+  }
+  element.dispatchEvent(inputEvent);
 }
 ```
