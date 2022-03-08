@@ -1,7 +1,6 @@
 ---
 title: "Set input value"
 weight: 80
-ie_support: false
 ---
 
 In the case when you want to set value to `<input>` element.
@@ -47,7 +46,19 @@ function changeValue(input, value) {
   ).set;
   nativeInputValueSetter.call(input, value);
 
-  var inputEvent = new Event("input", { bubbles: true });
-  input.dispatchEvent(inputEvent);
+  var inputEvent;
+  if (typeof Event === "function") {
+    /**
+    * For modern browser
+    */
+    inputEvent = new Event("input", { bubbles: true });
+  } else {
+    /**
+     * For IE 11
+     */
+    inputEvent = document.createEvent("Event");
+    inputEvent.initEvent("input", true, true);
+  }
+  element.dispatchEvent(inputEvent);
 }
 ```
