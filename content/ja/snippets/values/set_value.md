@@ -1,7 +1,7 @@
 ---
 title: "要素に値を設定する"
 weight: 80
-ie_support: false
+ie_support: true
 ---
 
 `<input>` 要素に対して値を設定します。
@@ -47,7 +47,19 @@ function changeValue(input, value) {
   ).set;
   nativeInputValueSetter.call(input, value);
 
-  var inputEvent = new Event("input", { bubbles: true });
-  input.dispatchEvent(inputEvent);
+  var inputEvent;
+  if (typeof Event === "function") {
+    /**
+    * モダンブラウザ用の処理
+    */
+    inputEvent = new Event("input", { bubbles: true });
+  } else {
+    /**
+     * IE 11 対応
+     */
+    inputEvent = document.createEvent("Event");
+    inputEvent.initEvent("input", true, true);
+  }
+  element.dispatchEvent(inputEvent);
 }
 ```
