@@ -10,7 +10,7 @@ Note: This snippet assumes the copied data is text.
 
 ### Usage
 
-You need a pair of JavaScript steps in your scenario:
+You need a pair of JS Steps in your scenario:
 
 1. Adding an event listener for `copy` event which stores the data to `localStorage`
 2. Getting the data from `localStorage`
