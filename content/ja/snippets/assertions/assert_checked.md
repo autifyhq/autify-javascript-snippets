@@ -8,7 +8,7 @@ ie_support: true
 
 現在レコーダーでサポートされているアサーションについては、以下をご確認ください。
 
-https://autify.zendesk.com/hc/ja/articles/900001652023
+https://help.autify.com/docs/ja/list-of-assertions?highlight=%E3%82%A2%E3%82%B5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E4%B8%80%E8%A6%A7
 
 以下の値をテストケースに合うように変更してください:
 
