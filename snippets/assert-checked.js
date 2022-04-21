@@ -4,7 +4,7 @@
  *   is checked or not, in case it is not possible with Recorder.
  * 
  *   Refer to the following document for currently supported assertions by Recorder.
- *   https://autify.zendesk.com/hc/en-us/articles/900001652023
+ *   https://help.autify.com/docs/list-of-assertions
  *
  *   Change the following values to fit your test case:
  *     selector: A string of a selector to specify the element
