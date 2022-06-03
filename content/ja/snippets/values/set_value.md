@@ -60,6 +60,6 @@ function changeValue(input, value) {
     inputEvent = document.createEvent("Event");
     inputEvent.initEvent("input", true, true);
   }
-  element.dispatchEvent(inputEvent);
+  input.dispatchEvent(inputEvent);
 }
 ```
