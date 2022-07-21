@@ -1,5 +1,5 @@
 ---
-title: "Confirm a checkbox is checked or not"
+title: "Confirm an element is checked or not"
 weight: 10
 ie_support: true
 ---
