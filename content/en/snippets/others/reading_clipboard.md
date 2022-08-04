@@ -19,23 +19,29 @@ The step 1 should be inserted **before the click step**, then you can read the d
 
 ```js
 // Step 1
-document.addEventListener('copy', function(event) {
+document.addEventListener("copy", function (event) {
   var active = document.activeElement;
-  if (active instanceof HTMLInputElement || active instanceof HTMLTextAreaElement) {
-    var data = active.value.substring(active.selectionStart, active.selectionEnd);
-    localStorage.setItem('clipboard', data);
+  if (
+    active instanceof HTMLInputElement ||
+    active instanceof HTMLTextAreaElement
+  ) {
+    var data = active.value.substring(
+      active.selectionStart,
+      active.selectionEnd
+    );
+    localStorage.setItem("clipboard", data);
   }
 });
 
 // Step 2
-return localStorage.getItem('clipboard');
+return localStorage.getItem("clipboard");
 ```
 
 ### Caveat
 
 #### iOS Safari doesn't work with `document.execCommand("copy")` with Autify
 
-Due to technical limitation, Autify can't properly trigger `document.execCommand("copy")` only on iOS Safari environment yet.  Therefore, this snippet (or any other workaround) won't work with iOS Safari as of March 2022.
+Due to technical limitation, Autify can't properly trigger `document.execCommand("copy")` only on iOS Safari environment yet. Therefore, this snippet (or any other workaround) won't work with iOS Safari as of March 2022.
 
 #### Doesn't support `navigation.clipboard.writeText()` API
 

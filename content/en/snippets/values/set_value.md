@@ -50,8 +50,8 @@ function changeValue(input, value) {
   var inputEvent;
   if (typeof Event === "function") {
     /**
-    * For modern browser
-    */
+     * For modern browser
+     */
     inputEvent = new Event("input", { bubbles: true });
   } else {
     /**
