@@ -14,11 +14,11 @@ function delay(seconds) {
 }
 
 return (async () => {
-  // 処理の解決を待つために
-  // Promise オブジェクトを返す必要があります。
-  // このスコープの中にコードを書き込んでください。
+  // You want to return promise object
+  // so that the test executon engine can wait it to be resolved.
+  // Please write the code inside of this scope.
 
-  // 例:
+  // Example:
   console.log(Date.now());
   await delay(1);
   console.log(Date.now());
