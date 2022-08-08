@@ -7,7 +7,7 @@ ie_support: false
 Import a JavaScript library. The following example imports jQuery from CDN.
 It loads JavaScript by creating a `<script>` element and adding it to the `<head>` element.
 
-(Caveat) When you use a third-party library, please do it at your own risk.
+(Caveat) When you use a third-party library, please do it at your own risk. If you should use a malicious library, your web site whould be exposed to risks to execute arbitary codes.
 
 ```js
 const script = document.createElement('script');
