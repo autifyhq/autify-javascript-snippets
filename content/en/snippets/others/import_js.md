@@ -27,7 +27,7 @@ return new Promise((resolve, reject) => {
 })
 ```
 
-You can use the functions of jQuery in following JS steps.
+You can use the functions of jQuery in subsequent JS steps.
 
 ```js
 // Example usage of jQuery
