@@ -7,7 +7,7 @@ ie_support: false
 JavaScript ライブラリを読み込みます。以下の例では jQuery を CDN から読み込んでいます。
 `<script>` 要素を生成して `<head>` 要素に追加することで JavaScript を読み込めます。
 
-（注意）サードパーティライブラリのご利用は自己責任でお願いします
+（注意）サードパーティライブラリのご利用は自己責任でお願いします。
 
 ```js
 const script = document.createElement('script');
