@@ -1,5 +1,5 @@
 ---
-title: "Import a JavaScript library"
+title: "JavaScript ライブラリを読み込む"
 weight: 30
 ie_support: false
 ---
