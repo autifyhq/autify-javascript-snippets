@@ -14,8 +14,8 @@ const __dirname = new URL(".", import.meta.url).pathname;
 const contentDir = (lang) =>
   path.resolve(__dirname, "../content", lang, "snippets");
 
-const jsCodeBlockPattern = /```js(.+)```/s;
-const frontMatterPattern = /---\n(.+)\n---/s;
+const jsCodeBlockPattern = /```js(.+?)```/s;
+const frontMatterPattern = /---\n(.+?)\n---/s;
 
 describe("content/", () => {
   const langs = ["en/", "ja/"];
