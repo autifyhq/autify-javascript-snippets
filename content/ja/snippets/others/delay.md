@@ -1,5 +1,5 @@
 ---
-title: "Delay (with await)"
+title: "遅延（awaitを利用）"
 weight: 10
 ie_support: false
 ---
