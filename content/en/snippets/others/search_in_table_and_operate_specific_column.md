@@ -4,28 +4,50 @@ weight: 10
 ie_support: false
 ---
 
-Search for text in a table and get the element of a specific column in the row found by the search.
+Search for a text in a table and get the element of a specific column in the row found by the search.
 Then do something like "click" or "get innerText" on the element.
+If there are multiple matches, the first matched element will be taken.
 
 ```js
-const targetText = ""; //TODO: Put the text you want to look for.
-const columnNum = ""; //TODO: Put the column number of the row found by the text you put.
+const targetText = ""; //TODO: Specify a text that one of the cells in the desired row has.
+const colIndex = 1; //TODO: Specify the column index of the desired cell that you want to interact with.
 
-const tagName = "td";
-const candidates = document.getElementsByTagName(tagName);
-const filtered = Array.from(candidates).filter((el) => el.innerText === targetText); // 完全一致です
+const xpath = `//td[text()="${targetText}"]`;
 
-const count = filtered.length;
-if (!count) {
-  throw new Error(`Element contains text "${targetText}" not found`);
+function getElementByXpath(xp) {
+  return document.evaluate(
+    xp,
+    document,
+    null,
+    XPathResult.FIRST_ORDERED_NODE_TYPE,
+    null
+  ).singleNodeValue;
 }
-if (count > 1) {
-  console.log(`${count} elements found. Taking the first element in the list as a target.`);
+
+let tempElement = getElementByXpath(xpath);
+if(!tempElement) {
+  throw new Error(`Error: TD element not found (${xpath})`);
 }
 
-const targetRowElement = filtered[0].parentElement;
-const targetColumnElement = targetRowElement.querySelector(`td:nth-child(${columnNum})`)
+while(tempElement) {
+  tempElement = tempElement.parentElement;
+  if(tempElement.tagName === "TR") {
+    break;
+  }
+}
+if(!tempElement) {
+  throw new Error(`Error: TR element (row) not found (Parent or ancestor of ${xpath})`);
+}
 
-// Do something to the target element, for example,
-return targetColumnElement.innerText;
+const selector = `td:nth-child(${colIndex})`;
+const targetElement = tempElement.querySelector(selector);
+if(!targetElement) {
+  throw new Error(`Error: Element not found (${selector})`);
+}
+
+/*
+* Write some interactions with the element.
+* Use the click() method, put assertions, just return it, etc. 
+*/
+targetElement.click();
 ```
