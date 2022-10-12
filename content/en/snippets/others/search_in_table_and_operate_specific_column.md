@@ -5,14 +5,16 @@ ie_support: false
 ---
 
 Search for a text in a table and get the element of a specific column in the row found by the search.
+Search with multiple texts are also possible, and lines with all specified texts will be targeted.
 Then do something like "click" or "get innerText" on the element.
 If there are multiple matches, the first matched element will be taken.
 
 ```js
-const targetText = ""; //TODO: Specify a text that one of the cells in the desired row has.
+const targetTextList = ["<TODO: REPLACE>"]; //TODO: Specify a text that one of the cells in the desired row has. To specify more than one, add text to the array.
 const colIndex = 1; //TODO: Specify the column index of the desired cell that you want to interact with.
 
-const xpath = `//td[text()="${targetText}"]`;
+const trPredicates = targetTextList.map(targetText => `td[text()='${targetText}']`).join(' and ')
+const xpath = `//tr[${trPredicates}]`
 
 function getElementByXpath(xp) {
   return document.evaluate(
@@ -24,19 +26,9 @@ function getElementByXpath(xp) {
   ).singleNodeValue;
 }
 
-let tempElement = getElementByXpath(xpath);
+const tempElement = getElementByXpath(xpath);
 if(!tempElement) {
-  throw new Error(`Error: TD element not found (${xpath})`);
-}
-
-while(tempElement) {
-  tempElement = tempElement.parentElement;
-  if(tempElement.tagName === "TR") {
-    break;
-  }
-}
-if(!tempElement) {
-  throw new Error(`Error: TR element (row) not found (Parent or ancestor of ${xpath})`);
+  throw new Error(`Error: TR element not found (${xpath})`);
 }
 
 const selector = `td:nth-child(${colIndex})`;
