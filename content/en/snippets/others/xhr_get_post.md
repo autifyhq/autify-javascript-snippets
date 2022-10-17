@@ -5,7 +5,11 @@ ie_support: true
 ---
 Use these snippets when you want to send a HTTP request to an API endpoint.
 
-Send GET request to a URL.
+The values set in the header and body are examples. The actual values depend on the specification of the API being requested. Please set appropriate values.
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank">XMLHttpRequest</a> is used to send HTTP requests.
+
+## Send GET request to a URL
 
 ```js
 var url = "API URL";
@@ -22,7 +26,7 @@ if (xhr.status !== 200) {
 console.log(JSON.parse(xhr.response));
 ```
 
-Send POST request to a URL.
+## Send POST request to a URL
 
 ```js
 var url = "API URL";
