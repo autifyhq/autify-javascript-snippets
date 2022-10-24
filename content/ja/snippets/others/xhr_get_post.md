@@ -3,9 +3,9 @@ title: "同期的に GET / POST リクエストを送る"
 weight: 10
 ie_support: true
 ---
-これらのスニペットは、APIエンドポイントにHTTPリクエストを送信する際に使用します。
+指定した API エンドポイント に対して GET / POST リクエストを送ります。
 
-ヘッダーとボディに設定されている値は例です。実際の値は、リクエストされるAPIの仕様に依存します。適切な値を設定してください。
+これらのコードはサンプルですので、ヘッダーやボディにはリクエストする API の仕様に沿って適切な値を設定してください。
 
 HTTPリクエストを送信するのに <a href="https://developer.mozilla.org/ja/docs/Web/API/XMLHttpRequest" target="_blank">XMLHttpRequest</a> を使用しています。
 
@@ -17,7 +17,6 @@ var url = "API URL";
 var xhr = new XMLHttpRequest();
 
 xhr.open("GET", url, false);
-xhr.setRequestHeader("Accept", "application/json");
 xhr.send();
 
 if (xhr.status !== 200) {

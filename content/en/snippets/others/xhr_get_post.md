@@ -3,9 +3,9 @@ title: "Send GET / POST request synchronously"
 weight: 10
 ie_support: true
 ---
-Use these snippets when you want to send a HTTP request to an API endpoint.
+Sends a GET / POST request to the specified API endpoint.
 
-The values set in the header and body are examples. The actual values depend on the specification of the API being requested. Please set appropriate values.
+Since these codes are samples, please set appropriate values for the header and body according to the specifications of the API to be requested.
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank">XMLHttpRequest</a> is used to send HTTP requests.
 
@@ -16,7 +16,6 @@ var url = "API URL";
 var xhr = new XMLHttpRequest();
 
 xhr.open("GET", url, false);
-xhr.setRequestHeader("Accept", "application/json");
 xhr.send();
 
 if (xhr.status !== 200) {
