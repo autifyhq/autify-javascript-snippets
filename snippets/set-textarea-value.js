@@ -30,7 +30,7 @@ function changeTextArea(input, value) {
     window.HTMLTextAreaElement.prototype,
     "value"
   ).set;
-  nativeInputValueSetter.call(input, value);
+  nativeInputValueSetter.call(input, value);gg
   
   var inputEvent;
   if (typeof Event === "function") {
