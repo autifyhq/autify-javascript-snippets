@@ -1,5 +1,5 @@
 ---
-title: "テキストエリアに値を設定する"
+title: "Textarea要素に値を設定する"
 weight: 80
 ie_support: true
 ---

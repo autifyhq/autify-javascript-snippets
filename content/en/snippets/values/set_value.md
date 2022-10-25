@@ -1,5 +1,5 @@
 ---
-title: "Set input value"
+title: "Set input element value"
 weight: 80
 ie_support: true
 ---

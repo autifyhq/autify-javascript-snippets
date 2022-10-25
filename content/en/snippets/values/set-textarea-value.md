@@ -1,5 +1,5 @@
 ---
-title: "Set TextArea value"
+title: "Set textarea element value"
 weight: 80
 ie_support: true
 ---
