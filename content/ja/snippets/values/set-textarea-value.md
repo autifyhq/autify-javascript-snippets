@@ -1,21 +1,20 @@
 ---
-title: "Input要素に値を設定する"
+title: "Textarea要素に値を設定する"
 weight: 80
 ie_support: true
 ---
 
-`<input>` 要素に対して値を設定します。
+`<textarea>` 要素に対して値を設定します。
 何らかの理由により、Autify のテスト実行で値の入力ができないときにご利用ください。
-`<input type="date">` は、Autify が対応していない代表的な要素です。
 
 以下の値を変更してください
 
 - `selector`: 対象要素を特定するセレクタの文字列
-- `setValue`: 設定したい値
+- `setTextArea`: 設定したい値
 
 ```js
 var selector = "<TODO: REPLACE>";
-var setValue = "<TODO: REPLACE>"; /* e.g) var setValue = "2006-01-02" */
+var setTextArea = "<TODO: REPLACE>";  //TODO: テキストエリアに入力したい内容を指定してください。改行を含めたい場合には、「\n」を指定してください。
 
 /**
  * --------- ここから下は変える必要はありません ----------
@@ -38,24 +37,24 @@ if (!element) {
 /**
  * 値を入力する
  */
-changeValue(element, setValue);
+inputTextToTextArea(element, setTextArea);
 
-function changeValue(input, value) {
+function inputTextToTextArea(input, value) {
   var nativeInputValueSetter = Object.getOwnPropertyDescriptor(
-    window.HTMLInputElement.prototype,
+    window.HTMLTextAreaElement.prototype,
     "value"
   ).set;
   nativeInputValueSetter.call(input, value);
-
+  
   var inputEvent;
   if (typeof Event === "function") {
     /**
-     * モダンブラウザ用の処理
-     */
+    * For modern browser
+    */
     inputEvent = new Event("input", { bubbles: true });
   } else {
     /**
-     * IE 11 対応
+     * For IE 11
      */
     inputEvent = document.createEvent("Event");
     inputEvent.initEvent("input", true, true);

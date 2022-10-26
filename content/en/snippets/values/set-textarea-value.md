@@ -1,21 +1,20 @@
 ---
-title: "Set input element value"
+title: "Set textarea element value"
 weight: 80
 ie_support: true
 ---
 
-In the case when you want to set value to `<input>` element.
+In the case when you want to set value to `<textarea>` element.
 Use this if Autify is unable to enter values in a test run for some reason.
-`<input type="date">` is a typical element that is not supported by Autify.
 
 Change the values written below.
 
 - `selector`: A string of a selector to pinpoint the element.
-- `setValue`: A value to be set.
+- `setTextArea`: A value to be set.
 
 ```js
 var selector = "<TODO: REPLACE>";
-var setValue = "<TODO: REPLACE>"; /* e.g) var setValue = "2006-01-02" */
+var setTextArea = "<TODO: REPLACE>";  //TODO: Specify what you want to enter in the text area. If you want to include a line break, specify "\n".
 
 /**
  * --------- You don't need to touch below ---------------
@@ -36,22 +35,22 @@ if (!element) {
 }
 
 /**
- * Set input value
+ * Set TextArea value
  */
-changeValue(element, setValue);
+inputTextToTextArea(element, setTextArea);
 
-function changeValue(input, value) {
+function inputTextToTextArea(input, value) {
   var nativeInputValueSetter = Object.getOwnPropertyDescriptor(
-    window.HTMLInputElement.prototype,
+    window.HTMLTextAreaElement.prototype,
     "value"
   ).set;
   nativeInputValueSetter.call(input, value);
-
+  
   var inputEvent;
   if (typeof Event === "function") {
     /**
-     * For modern browser
-     */
+    * For modern browser
+    */
     inputEvent = new Event("input", { bubbles: true });
   } else {
     /**
