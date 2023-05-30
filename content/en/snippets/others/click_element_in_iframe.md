@@ -15,7 +15,7 @@ var selectorTargetElement = "<TODO: REPLACE>";
  */
 
 /**
- * Locate the document in iframe
+ * Locate the iframe
  */
 var iframeHtml = document.querySelector(selectorIframeHtml);
 
