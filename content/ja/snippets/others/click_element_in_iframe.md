@@ -15,7 +15,7 @@ var selectorTargetElement = "<TODO: REPLACE>";
  */
 
 /**
- * iframe内のdocumentを取得する
+ * iframeを探す
  */
 var iframeHtml = document.querySelector(selectorIframeHtml);
 
