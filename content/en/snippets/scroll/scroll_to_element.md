@@ -1,10 +1,14 @@
 ---
-title: "Scroll until an element is visible"
+title: "Scroll until an element is displayd"
 weight: 20
 ie_support: false
 ---
 
-Scroll to a specified element in the entire page.
+Scroll down the page until the specific element is displayed.
+
+Change the following value to specify the element:
+
+- `selector`: A string of the element selector
 
 ```js
 /**
@@ -23,7 +27,8 @@ if (!element) {
 }
 
 /**
- * Scroll to the bottom of the element
+ * Scroll until the element is displayed.
+ * If the block value is set to "center", the element will scroll to the center of the page.
  */
-element.scrollIntoView(false);
+element.scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
 ```

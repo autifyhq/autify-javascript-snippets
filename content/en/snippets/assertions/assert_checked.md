@@ -4,11 +4,9 @@ weight: 10
 ie_support: true
 ---
 
-Use this snippet to assert that a checkable element (such as a radio button implemented as `<input type="radio">`) is checked or not, in case it is not possible with Recorder.
+Use this snippet to assert whether a checkable element is checked or not, in case it is not possible with currently supported assertions.
 
-Refer to the following document for currently supported assertions by Recorder.
-
-https://help.autify.com/docs/list-of-assertions
+Please check <a href="https://help.autify.com/docs/list-of-assertions" target="_blank">**here**</a> for currently supported assertions.
 
 Change the following values to fit your test case:
 
