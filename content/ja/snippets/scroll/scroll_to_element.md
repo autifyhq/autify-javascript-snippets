@@ -4,7 +4,11 @@ weight: 20
 ie_support: false
 ---
 
-特定の要素の位置までページをスクロールします。
+特定の要素が表示されるまでページをスクロールします。
+
+以下の値を対象要素に合わせて変更してください。
+
+- `selector`: 要素を特定するCSSセレクターの文字列
 
 ```js
 /**
@@ -23,7 +27,8 @@ if (!element) {
 }
 
 /**
- * 要素の下が表示されるまでスクロールする
+ * 要素が表示されるまでスクロールする
+ * 要素を真ん中までスクロールする場合はblockの値を"center"に変更してください
  */
-element.scrollIntoView(false);
+element.scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
 ```
