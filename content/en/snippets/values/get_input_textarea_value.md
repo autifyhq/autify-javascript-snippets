@@ -1,5 +1,5 @@
 ---
-title: "Get the value entered into an Input or Textarea element."
+title: "Get the value entered into an Input or Textarea element"
 weight: 60
 ie_support: true
 ---
