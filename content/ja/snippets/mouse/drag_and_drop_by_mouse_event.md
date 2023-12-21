@@ -29,21 +29,28 @@ if (!dropArea) {
   throw new Error("Element not found by selector:", dropAreaSelector);
 }
 
-var coords = getCoordinates(dropArea);
+var dragCoords = getCoordinates(dragTarget)
+var dropCoords = getCoordinates(dropArea);
 
-dragTarget.dispatchEvent(new MouseEvent("mousedown", { bubbles: true }));
+dragTarget.dispatchEvent(
+  new MouseEvent("mousedown", {
+    bubbles: true,
+    clientX: dragCoords.x,
+    clientY: dragCoords.y
+  })
+);
 dragTarget.dispatchEvent(
   new MouseEvent("mousemove", {
     bubbles: true,
-    clientX: coords.x,
-    clientY: coords.y,
+    clientX: dropCoords.x,
+    clientY: dropCoords.y
   })
 );
 dragTarget.dispatchEvent(
   new MouseEvent("mouseup", {
     bubbles: true,
-    clientX: coords.x,
-    clientY: coords.y,
+    clientX: dropCoords.x,
+    clientY: dropCoords.y
   })
 );
 
