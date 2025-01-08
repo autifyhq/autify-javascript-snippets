@@ -8,7 +8,7 @@ ie_support: true
 
 ```js
 /* 戻る */
-window.history.back();
+autify.back();
 
 /* 進む */
 window.history.forward();

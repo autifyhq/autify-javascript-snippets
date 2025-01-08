@@ -8,7 +8,7 @@ Simulate back, forward, reload on a browser.
 
 ```js
 /* Back */
-window.history.back();
+autify.back();
 
 /* Forward */
 window.history.forward();
